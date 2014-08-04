@@ -20,6 +20,6 @@
         "class": "Pimcore\\Composer\\AreabrickInstaller"
     },
 	"require": {
-        "pimcore/pimcore": "@dev"
+        "pimcore/pimcore": ">=2"
     }
 }
