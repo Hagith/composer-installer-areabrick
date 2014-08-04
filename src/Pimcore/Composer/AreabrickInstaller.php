@@ -16,6 +16,9 @@ class AreabrickInstaller extends LibraryInstaller
 		$areaName = ucfirst($areaNameParts[1]); 
 		
 		$docRootName = "./www"; 
+		
+		file_put_contents("/tmp/composer.out", print_r($this->composer->getConfig()->raw(), true);
+		
 		if($configDocRoot = $this->composer->getConfig()->get("document-root-path")) {
 			$docRootName = rtrim($configDocRoot,"/");
 		}
