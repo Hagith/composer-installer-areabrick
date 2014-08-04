@@ -12,7 +12,7 @@ class AreabrickInstaller extends LibraryInstaller
      */
     public function getInstallPath(PackageInterface $package)
     {
-        return './www/website/views/areas/';
+        return './www/website/views/areas/' . $package->getName() . "/";
     }
 
     /**
