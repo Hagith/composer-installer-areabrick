@@ -14,7 +14,13 @@ class AreabrickInstaller extends LibraryInstaller
     {
 		$areaNameParts = explode("/",$package->getName());
 		$areaName = ucfirst($areaNameParts[1]); 
-        return './www/website/views/areas/' . $areaName . "/";
+		
+		$docRootName = "./www"; 
+		if($configDocRoot = $this->composer->getConfig()->get("document-root-path")) {
+			$docRootName = rtrim($configDocRoot,"/");
+		}
+		
+        return $docRootName . '/website/views/areas/' . $areaName . "/";
     }
 
     /**
